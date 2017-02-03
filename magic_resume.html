@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" width="device-width,intial-scale=1.0">
+		<title ></title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+		<style>
+			div{
+				position:relative;
+				width:500px;
+				margin:20px;
+				left:100px;
+				padding:10px;
+				float:left;
+				border:0.5px solid black;
+			}
+			#main_div{
+				line-height:2em;
+				font-family:Tahoma sans-serif;
+				font-style :bold;
+				text-align:justify;
+				height:auto;
+
+			}
+			#resume{
+				background-color:#ADD8E6;
+				font-family:Georgia Arial;
+				word-spacing:2px;
+				font-size:120%;
+				height:auto;
+			}
+			input{
+				background-color:#ADD8E6;
+				border:0.2px dotted gray;
+				color:white;
+			}
+			.text{
+				color:blue;
+				font-style:italic;
+			}
+			h2,h3,h4{
+				text-align: center;
+				font-style:Arial sans-serif;
+			}
+		</style>
+	</head>
+	<body ng-app="">
+		<div id="main_div">
+			<form>
+				<h3>Applicant Details</h3>
+				UserName : <input type="text"  ng-model="username"><br>
+				Branch : <input type="text" ng-model="branch"><br>
+				Semester : <input type="number" placeholder="0" ng-model="semester"><br>
+				College :<input type="text" ng-model="college"><br>
+
+				<h3>Work samples and Project Sample</h3>
+				Hackerrank : <input type="text" ng-model="hackerrank"><br>
+				Hackearth : <input type="text" ng-model="hackearth" ><br>
+				Github : <input type="text" ng-model="github" ><br>
+				Work Experience : <input type="text" ng-model="experience"><br>
+
+				<br>Hobbies:<input type="text" ng-model="hobbies" ><br>
+
+				<h3>Contact Details</h3>
+				Email Id : <input type="email" ng-model="mail_address"><br>
+				Contact Number : <input type="text" ng-model="contact_number"><br>
+				Residental Address :<input type="textarea" ng-model="address"><br>
+
+			</form>
+		</div>
+		<div id="resume">
+			<h2>RESUME</h2>
+			
+			<p> My name is <span class="text"> {{username}}</span> .I am a student of <span class="text">{{branch}}</span> in <span class="text">{{semester}}</span> semester of  <span class="text">{{college}}</span>..La La Liga</p>
+			
+			<h4>WORK PROFILES</h4>
+			Hackearth : <span class="text"><a href="{{hackearth}}">{{hackearth}}</a></span><br>
+			Hackerrank : <span class="text"><a href="{{hackerrank}}">{{hackerrank}}</a></span><br>
+			Github : <span class="text"><a href="{{github}}">{{github}}</a></span><br>
+
+			<h4>Work Experience</h4>
+			<p class="text"> {{experience}}</p>
+
+			<h4>Hobbies</h4>
+			<p class="text">{{hobbies}}</p>
+
+
+			<h4>Contact Details</h4>
+			<span class="text">{{mail_address}}<br>{{contact_number}}<br>{{address}}<br></span>
+
+		</div>
+	</body>
+</html>
